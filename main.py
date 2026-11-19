@@ -233,3 +233,131 @@ b = 20
 print(f"Addition: {a + b}")
 print(f"Multiplication: {a * b}")
 print(f"Division: {b / a}")
+
+'''
+Boolean:
+1. True: True represent 1
+2. False: False represent 0
+we can do addition of booleans types as well
+'''
+print("--------Boolean-----------")
+print(f"True==True: {True==True}")
+print(f"False+True:{False+True}")
+
+'''
+List:A List in Python is a collection of items stored in a single variable. 
+Lists are used to store multiple values of different data types.
+Lists are:
+- Ordered – Items maintain their insertion order.
+- Mutable – You can add, remove or modify elements.
+- Allow duplicates – The same value can appear multiple times.
+- Can store different data types – Integers, strings, floats, Boolean values, etc.
+1. Creating a List
+Lists are created using square brackets [].
+2. Accessing List Elements (Indexing)
+Python uses indexing to access list elements.
+- Positive indexing starts from 0.
+- Negative indexing starts from -1 (last element).
+'''
+print("--------List-----------")
+people:list[str]=['Radhika', 'Pravin', 'Shradha', 'Sagar', 'Chaitrali', 'Rakesh' ]
+print("List:",people)
+print('first element of list:',people[0])
+print('last element of list:',people[-1])
+
+'''
+List Slicing:In Python, to access a range of items in a list, we use a concept called List Slicing.
+List slicing allows you to extract multiple elements from a list instead of accessing one element at a time.
+1. Syntax
+list_name[start:end:step]
+Parameter	Meaning
+start	    Index where slicing starts (included)
+end	        Index where slicing stops (excluded)
+step	    Number of positions to skip
+
+we can replace element of list using range of items and assigning required values to specific range value we want to replace
+Methods:
+1. insert() – Add at a specific index
+2. append() – Add an element at the end of the list
+3. extend() – Add multiple elements or to combine two different list together
+4. remove() – Remove a specific value
+5. pop() – Remove an element, if we not shared index value to remove it will remove last element from list.
+6. sort() – Sort elements
+7. reverse() – Reverse the order
+8. clear() - Clear all list element
+'''
+print("--------ListSlicing-----------")
+print(f"people[0:2]: {people[0:2]}")
+print(f"people[0:2]: {people[0:5:2]}")
+# Replace value
+people[0:2]=['Jai', 'Gurudev']
+print(people)
+#insert value
+people.insert(2,'Anjali')
+print(people)
+#append value
+people.append('Pandurang')
+print(people)
+#extend
+people2:list[str]=['Radhika', 'Pravin']
+people.extend(people2)
+print(people)
+#alternative to combine two list
+new_people= people + people2
+print(new_people)
+# Remove specific value
+people.remove('Sagar')
+print(people)
+#pop
+people.pop(5)
+people.pop()
+print(people)
+people2.clear()
+print(people2)
+#reverse the list
+people.reverse()
+print(people)
+#sort
+people.sort()
+print(people)
+'''
+Tuple:A Tuple in Python is a collection of multiple items stored in a single variable. 
+It is similar to a List, but the main difference is that Tuples are immutable, meaning you cannot modify their elements after creation.
+Tuples are commonly used when you want to store data that should remain unchanged.
+Important characteristics of Tuples
+- Ordered: Maintains insertion order.
+- Immutable: Cannot modify, add or remove elements after creation.
+- Allows duplicates: Duplicate values are permitted.
+- Multiple data types: Can store integers, strings, floats and Boolean values.
+- Indexed: Supports positive and negative indexing.
+You can create tuples from list by type conversion or type casting and vice versa
+To access a range of items in a tuples, we use a concept called tuple Slicing.
+Tuples have only two built-in methods for working with their elements.
+Method	Purpose	Example
+1. count()	Counts occurrences of a value	numbers.count(10)
+2. index()	Returns the first index of a value	numbers.index(20)
+'''
+print("--------Tuple-----------")
+people1:tuple ='Ram', 'Laxman', 'Seeta', 'Bharat', 'Shatrughan','Laxman'
+print(f"Type of people: {type(people1)}")
+print(people1)
+'''
+#Immutable
+people.add("Radhika")
+people1[0]='radhika'
+print(people) #AttributeError: 'tuple' object has no attribute 'add'
+'''
+#allows duplicates
+print(f"Zero index value: '{people1[0]}', Last index value: '{people1[-1]}'")
+#length of tuples
+print(f"Length of Tuple: {len(people1)}")
+
+people_list: list[str]=list(people1)
+print(f"People List by type casting: {people_list}")
+print(f"new people tuple from list: {tuple(people_list)}")
+#range
+print(f"People from 0th index to 2nd index: {people_list[:2]} ")
+print(f"All People from 2th index : {people_list[2:]} ")
+
+#Count ()
+print
