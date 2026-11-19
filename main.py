@@ -360,4 +360,5 @@ print(f"People from 0th index to 2nd index: {people_list[:2]} ")
 print(f"All People from 2th index : {people_list[2:]} ")
 
 #Count ()
-print
+print(f"Occurrences of 'Laxman' : {people1.count('Laxman')} ")
+print(f"Index number of 'Laxman' : {people1.index('Laxman')} ")
