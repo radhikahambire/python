@@ -362,3 +362,103 @@ print(f"All People from 2th index : {people_list[2:]} ")
 #Count ()
 print(f"Occurrences of 'Laxman' : {people1.count('Laxman')} ")
 print(f"Index number of 'Laxman' : {people1.index('Laxman')} ")
+'''
+Tuple Unpacking means assigning the elements of a tuple to individual variables in a single statement.
+Instead of accessing each element using its index, you can directly assign each value to a separate variable.
+Unpacking Using Asterisk (*):
+The asterisk operator * is used when you want to collect multiple remaining elements into a list.
+'''
+print("\n--------Tuple unpacking-----------")
+employee = ("Ram", "QA Engineer", 8)
+name, role, experience = employee
+print(f"name: {name}, \nrole: {role}, \nexperience: {experience}")
+
+numbers = (10, 20, 30, 40, 50)
+
+first, *remaining = numbers
+print(first)
+print(remaining)
+
+'''
+Sets:A Set in Python is a collection of unique elements. It is used to store multiple items in a single variable, without allowing duplicate values.
+Sets are particularly useful when you want to remove duplicate data, compare collections, or find common and different elements.
+1. Characteristics of Sets
+- Unordered: Elements do not have a guaranteed position or indexing.
+- Mutable: You can add or remove elements.
+- No duplicates: Duplicate values are automatically removed.
+- Unindexed: You cannot access elements using indexes.
+- Different data types: Can contain integers, strings, floats and other hashable objects.
+Sets are created using curly brackets {}.
+'''
+print("\n--------Sets-----------")
+fruits = {"Apple", "Banana", "Mango", "Orange"}
+print(f"Sets: {fruits}")
+print(f"Type of fruits: {type(fruits)}")
+
+'''
+Adding Elements to a Set
+Python provides two important methods.
+A. add() – Adds one element
+B. update() – Adds multiple elements
+Removing Elements from a Set
+Method	Purpose
+remove()	Removes an element; raises KeyError if absent
+discard()	Removes an element; no error if absent
+pop()	Removes and returns an arbitrary element
+clear()	Removes all elements
+'''
+fruits.add('Watermelon')
+print(f"add method: {fruits}")
+fruits.update(["Chiku", "Papaya"])
+print(f"update method: {fruits}")
+fruits.remove('Chiku')
+print(f"remove method: {fruits}")
+fruits.discard('Apple')
+print(f"discard method: {fruits}")
+fruits.pop()
+print(f"pop method: {fruits}")
+fruits.clear()
+print(f"clear method: {fruits}")
+
+'''
+Python Set union() Method
+The union() method combines two or more sets and returns a new set containing all unique elements from the sets.
+It removes duplicate values automatically.
+1. Syntax: set1.union(set2)
+You can also combine multiple sets: set1.union(set2, set3)
+'''
+print("\n--------Set union()-----------")
+set1 = {10, 20, 30, 40}
+set2 = {30, 40, 50, 60}
+
+result = set1.union(set2)
+
+print(f"union result: {result}")
+print(f"union result: {set1 | set2}")
+
+'''
+Set Operations (Very Important): Set operations are useful for comparing two collections.
+A. Union (|)- Bitwise operator: Returns all unique elements from both sets. Alternative method: A.union(B)
+B. Intersection (&): Returns common elements present in both sets. Alternative method: A.intersection(B)
+C. Difference (-): Returns elements present in the first set but not in the second.Alternative method: A.difference(B)
+D. Symmetric Difference (^): Returns elements that exist in either set but not in both.Alternative method: A.symmetric_difference(B)
+'''
+print("\n--------Set intersection()-----------")
+set1 = {10, 20, 30, 40}
+set2 = {30, 40, 50, 60}
+result = set1.intersection(set2)
+print(f"intersection result: {result}")
+print(f"intersection method: {set2 & set1}")
+
+print(f"--------set difference()-----------")
+set1 = {10, 20, 30, 40}
+set2 = {30, 40, 50, 60}
+result = set1.difference(set2)
+print(f"difference result: {result}")
+print(f"difference method: {set2 - set1}")
+print(f"--------set symmetric()-----------")
+set1 = {10, 20, 30, 40}
+set2 = {30, 40, 50, 60}
+result = set1.symmetric_difference(set2)
+print(f"symmetric result: {result}")
+print(f"symmetric method: {set2 ^ set1}")
